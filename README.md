@@ -3,6 +3,6 @@
 - web de un cine
 
 # Grupo 19:
-Campos, Victor
-Geronimo, Sebastian
+Campos, Victor; 
+Geronimo, Sebastian; 
 Menescardi, Ramiro
