@@ -62,7 +62,7 @@ nav {
 .slider-container {
     display: flex;
     width: 100%;
-    height: 40vh;
+    height: 72vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
