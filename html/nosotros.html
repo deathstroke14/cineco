@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nosotros.css">
+
+
+    <title>Nosotros</title>
+</head>
+
+<body onload="traer_datos()">
+    <div class="container">
+        <h1>¿Quienes Somos?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero officiis delectus reprehenderit maiores
+            facere reiciendis tenetur accusamus velit voluptatibus ea sint omnis aperiam dicta architecto dolor nobis
+            doloremque laudantium, nemo corrupti dignissimos pariatur error. Itaque minima tempore a repellendus et sint
+            hic quibusdam non nostrum. Quaerat vel molestiae aspernatur pariatur est voluptas excepturi nisi, distinctio
+            illo dicta ea veritatis molestias necessitatibus et ducimus quos perspiciatis fugiat nesciunt ipsa quis
+            inventore? Inventore quo fugit, rerum qui quas laboriosam aspernatur earum necessitatibus sit architecto
+            natus dicta dignissimos sed delectus eligendi veniam aut possimus deleniti hic ea assumenda et beatae porro
+            deserunt?</p>
+
+
+
+        <div class="personal" id="contenido">
+            
+
+
+        </div>
+    </div>
+
+    <script>
+        var contenido = document.querySelector('#contenido')
+        var cuadro=list()
+
+        function traer_datos() {
+            for (var i = 1; i <= 4; i++) {
+                fetch('https://randomuser.me/api')
+                    .then(res => res.json())
+                    .then(res => {
+                        console.log(res)
+                        console.log(res.results[0].email)
+                        // voy agregando el contenido con +=
+                        contenido.innerHTML += ` <div>
+                <img src="${res.results[0].picture.large}">
+                <p>Nombre: ${res.results[0].name.first}</p>
+                <p>Apellido: ${res.results[0].name.last}</p>
+                <p>Mail: ${res.results[0].email}</p>
+                </div>
+                `
+                    })
+                    .catch(error => console.log("Ocurrió un error", error)) 
+            }
+        } 
+    </script>
+</body>
+
+</html>

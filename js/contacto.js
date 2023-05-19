@@ -58,9 +58,3 @@ $(document).ready (function () {
     });
 
 });
-// $(document).ready (function () {
-//     $("#botonCancelar").click(function () {
-//         document.getElementById('index')
-
-//     });
-// });
