@@ -2,6 +2,94 @@
     margin: 0;
     padding: 0;
 }
+/* ------------------------------sebas- nav---------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top:0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 5%;
+    height: 100px;
+    background-color: #242526;
+}
+nav .logo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+nav img{
+    
+    float: left;
+    /* width: 40%;
+    height: 40%; */
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    /* border: 2px solid white; */
+}
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+nav .list li {
+    list-style: none;
+}
+nav .list a {
+    display: block;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+nav .list a:hover {
+    border-bottom: 4px solid violet;
+}
+#toggle{
+    position: absolute;
+    top: -100px;
+}
+nav .icon-bars{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav .icon-bars .line{
+width: 30px;
+height: 5px;
+background-color: white;
+margin: 5px;
+border-radius: 3px;
+transition: all .3s ease-in-out;
+}
+/* --------------------------fin nav------------------------ */
 
 body {
     background-color: black;
@@ -43,10 +131,10 @@ nav {
     /* text-align: right; */
 }
 
-#logo {
+/* #logo {
     padding: 4px ;
     width: 4em;
-}
+} */
 
 
 
@@ -61,10 +149,12 @@ nav {
 
 .slider-container {
     display: flex;
+    margin-top: 100px;
     width: 100%;
-    height: 72vh;
+    /* height: 72vh; */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    align-content: space-around;
 }
 
 .slider-container img {

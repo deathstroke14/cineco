@@ -13,7 +13,26 @@
 
 <body>
     <div class="contenedor">
-        <nav class="menu">
+        <nav>
+            <input type="checkbox" id="toggle">
+            <div class="logo">
+                <img id="logo" src="/img/logo.png" alt="cineco>">
+                <!-- <img src="img/logo.jfif" alt="logo cine"> -->
+            </div>
+            <ul class="list">
+                <li> <a href="#inicio">Inicio</a> </li>
+                <li> <a href="#">Cartelera</a> </li>
+                <li> <a href="#">Registro</a> </li>
+                <li> <a href="#">Nosotros</a> </li>
+                <li> <a href="#">Contacto</a> </li>
+            </ul>
+            <label for="toggle" class="icon-bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+        <!-- <nav class="menu">
             <h1><img id="logo" src="/img/logo.png" alt="cineco>"></h1>
 
             <ul class="">
@@ -22,7 +41,7 @@
                 <li><a href="http://">Registro</a></li>
                 <li><a href="http://">Nosotros</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
         <!-- <div class="carrusel">
             <img src="#" alt="img 1" class="img">
@@ -33,7 +52,8 @@
             <li class="punto"></li>
             <li class="punto"></li>
         </ul> -->
-        <div class="slider-container">
+        <section id="inicio">
+        <div  class="slider-container">
             <img class="slider-item"
                 src="img/1banner.webp" />
             <img class="slider-item"
@@ -87,6 +107,7 @@
         <div class="proximamente">
 
         </div>
+    </section>
 
         <footer class="pie">
             <h3>FOOTER</h3>
