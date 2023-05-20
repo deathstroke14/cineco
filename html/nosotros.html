@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/nosotros.css">
 
 
@@ -14,19 +17,26 @@
 <body onload="traer_datos()">
     <div class="container">
         <h1>¿Quienes Somos?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero officiis delectus reprehenderit maiores
-            facere reiciendis tenetur accusamus velit voluptatibus ea sint omnis aperiam dicta architecto dolor nobis
-            doloremque laudantium, nemo corrupti dignissimos pariatur error. Itaque minima tempore a repellendus et sint
-            hic quibusdam non nostrum. Quaerat vel molestiae aspernatur pariatur est voluptas excepturi nisi, distinctio
-            illo dicta ea veritatis molestias necessitatibus et ducimus quos perspiciatis fugiat nesciunt ipsa quis
-            inventore? Inventore quo fugit, rerum qui quas laboriosam aspernatur earum necessitatibus sit architecto
-            natus dicta dignissimos sed delectus eligendi veniam aut possimus deleniti hic ea assumenda et beatae porro
-            deserunt?</p>
+        <p class="presentacion">Somos la mejor opción en entretenimiento, fortaleciendo nuestro liderazgo en la industria cinematográfica a
+            nivel internacional, ofreciendo diversión, innovación y un servicio estelar. </p>
+        <p class="presentacion">Nacida en 2012, con una fuerte presencia en el mercado internacional, las coproducciones son la base de
+            identificación de la empresa, buscando y generando alianzas estratégicas con socios de Latinoamérica y
+            Europa principalmente. Llevamos adelante proyectos con identidad innovadora y creativa. Todos nuestros
+            productos apuntan a públicos definidos con una impronta de excelencia en su calidad técnica y artística.</p>
+
+        <p class="presentacion"> Además de los proyectos propios, CINECO> brinda servicios de producción a terceros para la
+            realización de proyectos cinematográficos, televisivos, publicitarios, videoclips y de otras plataformas,
+            adaptándose a distintos tipos de presupuestos, asegurando el mejor nivel de talentos y profesionales del
+            medio.</p>
+
+
+
 
 
 
         <div class="personal" id="contenido">
-            
+            <div class="usuario"> <h3>Nuestro equipo: </h3></div>
+
 
 
         </div>
@@ -34,7 +44,7 @@
 
     <script>
         var contenido = document.querySelector('#contenido')
-        var cuadro=list()
+
 
         function traer_datos() {
             for (var i = 1; i <= 4; i++) {
@@ -44,7 +54,7 @@
                         console.log(res)
                         console.log(res.results[0].email)
                         // voy agregando el contenido con +=
-                        contenido.innerHTML += ` <div>
+                        contenido.innerHTML += ` <div class="usuario">
                 <img src="${res.results[0].picture.large}">
                 <p>Nombre: ${res.results[0].name.first}</p>
                 <p>Apellido: ${res.results[0].name.last}</p>
@@ -52,7 +62,7 @@
                 </div>
                 `
                     })
-                    .catch(error => console.log("Ocurrió un error", error)) 
+                    .catch(error => console.log("Ocurrió un error", error))
             }
         } 
     </script>

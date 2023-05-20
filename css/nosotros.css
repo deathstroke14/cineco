@@ -10,21 +10,37 @@ body{
     display: flex;
     align-content: space-around;
     flex-direction: column;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    color: white;
+}
+.presentacion{
+    padding: 1rem;
+    text-align: justify;
 }
 .personal{
     
     display: flex;
     align-content: center;
+    justify-content: space-around;
     
 }
-div{
+.usuario h3{
+    
+    justify-content: center;
+    color: lightblue;
+}
+
+.usuario{
     
     margin: 30px;
     color: #FFD200;
     background-color: black;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Asap', sans-serif;
+    
 }
+
 div img{
     border-radius: 25px;
 }
