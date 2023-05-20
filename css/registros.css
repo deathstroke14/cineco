@@ -17,7 +17,32 @@ form {
 	margin: 0 auto;
 	max-width: 500px;
 	padding: 20px;
+
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
 }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animacionBorde-form {
+   
+    border: 2px solid #007bff;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.animacionBorde-form:hover {
+    border-color: #ff0000;
+}
+
 
 label {
 	display: block;
@@ -42,3 +67,7 @@ input[type="reset"] {
 	background-color: #4CAF50;
 	border: none;
 	border-radius: 3px;}
+
+
+
+    
