@@ -1,6 +1,7 @@
 function enviarMensaje() {
     alert('Mensaje enviado con éxito!');
-    // document.getElementById("miForm").reset();
+    document.getElementById("miForm").reset();
+    window.location.href='/index.html'
 }
 //formulario validacion
 var regexNombre = /^\D+$/;
