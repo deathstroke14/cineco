@@ -43,7 +43,19 @@ nav img{
     font-weight: bold;
     text-transform: uppercase;
     background-color: transparent;
+    /* border-radius: 25px; */
+    padding: 5px;
     /* border: 2px solid white; */
+    /* animacion------------------------------------------ */
+    animation-name: cambiarFondo; /*cambiar a cambiarColor2 / cambiarColor3*/
+    animation-duration: 2.5s;
+    animation-timing-function: linear; /*cambiar a linear*/
+    animation-iteration-count: infinite;
+}
+@keyframes cambiarFondo {
+    0% {background: #242526; border-radius: 0px;}         /* Primer fotograma */
+    50% {background: #363738; border-radius: 20px; }     /* Segundo fotograma */
+    100% {background:gray; border-radius: 40px;}     /* Último fotograma */    
 }
 nav .list{
     float: right;
@@ -213,5 +225,23 @@ nav {
     border-radius: 3px;
 
 }
-
-
+/* ----------------------------footer------------------ */
+.pie{
+    display: flex;
+    /* border: 3px solid blue ; */
+    justify-content: space-between;
+    padding: 10px;
+}
+.pie  {
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+.direccion a {
+    color: red;
+}
+.subtitulo{
+    color: rgb(209, 207, 57);
+    text-align: left;
+}
