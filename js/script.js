@@ -24,7 +24,7 @@ const options = {//pass api
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzY4ZTI3ZWM5NTljMDliMGI5MDIyMzQ0OWQ1NTlhNSIsInN1YiI6IjY0NjQxZDA3ZjQ4YjM0MDEzODRiNWQwNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p9sch99tADmhVLWxgTDRam8-olCib6p74qRnBJ-lLVs'
+        Authorization: ''
     }
 }
 
