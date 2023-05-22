@@ -271,6 +271,7 @@ body {
     grid-template-rows: 1fr 1fr;
     row-gap: 2%;
     text-align: center;   
+    margin-bottom: 20px;
 }
 
 span{ 
@@ -294,6 +295,8 @@ span{
     /* border: 3px solid blue ; */
     justify-content: space-between;
     padding: 10px;
+    background-color: #242526;
+    margin: 0;
 }
 
 .pie {
@@ -301,6 +304,7 @@ span{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
+    font-size: 1vw;
 }
 
 .direccion a {

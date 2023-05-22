@@ -1,3 +1,8 @@
+function enviarMensaje() {
+    alert('El registro fue exitoso!');
+    
+    window.location.href='index.html'
+}
 const form = document.querySelector('form');
 const usuarioInput = document.querySelector('#usuario');
 const contraseñaInput = document.querySelector('#contraseña');
@@ -10,7 +15,8 @@ form.addEventListener('submit', (event) => {
 		alert('Las contraseñas no coinciden');
 		return;
 	}
-
+	enviarMensaje()
+		
 	// aquí podrías agregar el código para enviar el formulario
 });
 
