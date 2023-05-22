@@ -2,18 +2,20 @@
     margin: 0;
     padding: 0;
 }
+
 /* ------------------------------sebas- nav---------------- */
-*{
+* {
     padding: 0;
     margin: 0;
     /* box-sizing: border-box; */
 }
-nav{
+
+nav {
     position: absolute;
     z-index: 10;
     left: 0;
     right: 0;
-    top:0;
+    top: 0;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 5%;
     height: 100px;
@@ -23,7 +25,8 @@ nav{
     align-items: center;
 
 }
-nav .logo{
+
+ nav .logo {
     float: left;
     /* width: 50%;
     height: 50%; */
@@ -33,10 +36,11 @@ nav .logo{
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    
-}
-nav img{
-    
+
+} */
+
+#logo {
+
     float: left;
     width: 50%;
     height: 50%;
@@ -50,20 +54,39 @@ nav img{
     text-transform: uppercase;
     background-color: transparent;
     /* border-radius: 25px; */
-   
+    padding: 5px;
     /* border: 2px solid white; */
     /* animacion------------------------------------------ */
-    animation-name: cambiarFondo; /*cambiar a cambiarColor2 / cambiarColor3*/
+    animation-name: cambiarFondo;
+    /*cambiar a cambiarColor2 / cambiarColor3*/
     animation-duration: 2.5s;
-    animation-timing-function: linear; /*cambiar a linear*/
+    animation-timing-function: linear;
+    /*cambiar a linear*/
     animation-iteration-count: infinite;
 }
+
 @keyframes cambiarFondo {
-    0% {background: #242526; border-radius: 0px;}         /* Primer fotograma */
-    50% {background: #363738; border-radius: 20px; }     /* Segundo fotograma */
-    100% {background:gray; border-radius: 40px;}     /* Último fotograma */    
+    0% {
+        background: #242526;
+        border-radius: 0px;
+    }
+
+    /* Primer fotograma */
+    50% {
+        background: #363738;
+        border-radius: 20px;
+    }
+
+    /* Segundo fotograma */
+    100% {
+        background: gray;
+        border-radius: 40px;
+    }
+
+    /* Último fotograma */
 }
-nav .list{
+
+nav .list {
     float: right;
     padding: 0;
     margin: 0;
@@ -71,42 +94,50 @@ nav .list{
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
+
 nav .list li {
     list-style: none;
 }
+
 nav .list a {
     display: block;
     text-transform: uppercase;
     padding: 15px;
     font-size: 1.5vw;
+    font-size: 1.5vw;
     font-weight: bold;
     color: white;
     text-decoration: none;
 }
+
 nav .list a:hover {
     border-bottom: 4px solid violet;
 }
-#toggle{
+
+#toggle {
     position: absolute;
     top: -100px;
 }
-nav .icon-bars{
+
+nav .icon-bars {
     display: none;
     position: absolute;
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
 }
-nav .icon-bars .line{
-width: 30px;
-height: 5px;
-background-color: white;
-margin: 5px;
-border-radius: 3px;
-transition: all .3s ease-in-out;
+
+nav .icon-bars .line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
 }
+
 /* --------------------------fin nav------------------------ */
 
 body {
@@ -178,7 +209,7 @@ body {
 
 
 
-.cartelera{
+.cartelera {
     padding-top: 1%;
     display: grid;
     /* background-color: white; */
@@ -186,9 +217,10 @@ body {
     grid-template-rows: 1fr 1fr;
     gap: 1em;
     align-items: center;
-    
+
 
 }
+
 .cartelera .activo {
     color: red;
     background-color: #FDD306;
@@ -203,11 +235,11 @@ body {
     border-style: solid;
     border-radius: 5%;
     text-align: center;
-    
+
     font-weight: bold;
     padding: 3%;
     color: white;
-    
+
 }
 
 .cartelera .nroDia {
@@ -225,23 +257,27 @@ body {
     border-radius: 3px;
 
 }
+
 /* ----------------------------footer------------------ */
-.pie{
+.pie {
     display: flex;
     /* border: 3px solid blue ; */
     justify-content: space-between;
     padding: 10px;
 }
-.pie  {
+
+.pie {
     color: white;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
 }
+
 .direccion a {
     color: red;
 }
-.subtitulo{
+
+.subtitulo {
     color: rgb(209, 207, 57);
     text-align: left;
 }
