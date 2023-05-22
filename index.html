@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/estilos.css">
-
-
     <title>Cineco></title>
 </head>
 
-<body>
-    <div class="contenedor">
+<body >
+
+    <!-- <div class="contenedor" > -->
+
         <nav class="menu">
             <h1><img id="logo" src="/img/logo.png" alt="cineco>"></h1>
-
             <ul class="">
                 <li>&ltInicio></li>
                 <li><a href="http://">Cartelera</a></li>
@@ -24,75 +23,77 @@
             </ul>
         </nav>
 
-        <!-- <div class="carrusel">
-            <img src="#" alt="img 1" class="img">
-            <img src="#" alt="img 2" class="img">
-            <img src="#" alt="img 3" class="img">
-        </div>
-        <ul class="puntos">
-            <li class="punto"></li>
-            <li class="punto"></li>
-        </ul> -->
         <div class="slider-container">
-            <img class="slider-item"
-                src="img/1banner.webp" />
-            <img class="slider-item"
-                src="img/2banner.webp" />
-            <img class="slider-item"
-                src="img/3banner.jpg" />
+            <img class="slider-item" src="img/01banner.webp" />
+            <img class="slider-item" src="img/02banner.webp" />
+            <img class="slider-item" src="img/03banner.webp" />
         </div>
+
+        <div class="seccion">
+            <span>Cartelera</span><br><br>
+        </div>
+
         <div class="cartelera">
-            <div class="dia activo" id="dia1">
+            <div class="dia activo" id="dia1" onclick="cambiarDiaActivo(this.id,0,4)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia2">
+            <div class="dia " id="dia2" onclick="cambiarDiaActivo(this.id,0,4)">
                 <div class="nombreDia" "></div>
                     <div class=" nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia3">
+            <div class="dia " id="dia3" onclick="cambiarDiaActivo(this.id,4,8)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia4">
+            <div class="dia " id="dia4" onclick="cambiarDiaActivo(this.id,4,8)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia5">
+            <div class="dia " id="dia5" onclick="cambiarDiaActivo(this.id,8,12)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia6">
+            <div class="dia " id="dia6" onclick="cambiarDiaActivo(this.id,8,12)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
-            <div class="dia " id="dia7">
+            <div class="dia " id="dia7" onclick="cambiarDiaActivo(this.id,12,16)">
                 <div class="nombreDia"></div>
                 <div class="nroDia"></div>
                 <div class="nombreMes"></div>
             </div>
+        </div>
 
-            <div class="peliculasDia">
-                
-            </div>
+        <div class="peliculasDia">
 
+        </div>
 
+        <div class="seccion">
+            <span>Proximamente</span><br><br>
         </div>
         <div class="proximamente">
-
+            
+            
         </div>
+
+
 
         <footer class="pie">
             <h3>FOOTER</h3>
+
         </footer>
-    </div>
-    <script src="/js/script.js.js"></script>
+
+    <!-- </div> -->
+
+    <script src="/js/script.js"></script>
+
 </body>
 
 </html>

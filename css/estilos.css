@@ -7,10 +7,13 @@ body {
     background-color: black;
     font-family: 'Montserrat';
     font-size: 1em;
+     max-width: 1100px; 
+     margin: auto;
+    
 }
 
 nav {
-    
+
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     align-items: center;
@@ -33,7 +36,6 @@ nav {
 
 .menu ul {
     display: grid;
-    /* grid-auto-flow: column; */
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
     align-items: center;
@@ -44,7 +46,7 @@ nav {
 }
 
 #logo {
-    padding: 4px ;
+    padding: 4px;
     width: 4em;
 }
 
@@ -62,51 +64,48 @@ nav {
 .slider-container {
     display: flex;
     width: 100%;
-    height: 72vh;
+    height: 55vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    border-radius: 5px;
 }
 
-.slider-container img {
+ .slider-container img {
     flex: 0 0 100%;
     width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-}
+    
+} 
 
 
 
-.cartelera{
-    padding-top: 1%;
+.cartelera {
+    
+    padding: 1%;
     display: grid;
-    /* background-color: white; */
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr 1fr;
     gap: 1em;
     align-items: center;
-    
-
+    background-color: white;
+    border-radius: 5px;
 }
-.cartelera .activo {
-    color: red;
-    background-color: #FDD306;
-    border-radius: 3px;
 
+.cartelera .activo {
+    color: black;
+    background-color: #FDD306;
 }
 
 .cartelera .dia {
-    /* background-color: red; */
-    border-color: #FDD306;
-    border-width: thin;
-    border-style: solid;
-    border-radius: 5%;
+    background-color: black;
     text-align: center;
-    
     font-weight: bold;
     padding: 3%;
     color: white;
+    border-radius: 5px;
     
 }
+
 
 .cartelera .nroDia {
     font-size: 2em;
@@ -117,11 +116,58 @@ nav {
 }
 
 .cartelera .dia:hover {
-
     background-color: #FDD306;
     color: black;
-    border-radius: 3px;
+}
 
+.peliculasDia {
+    padding: 0% 1% 1% 1%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+    border-radius: 5px;
+}
+
+.peliculasDia .peliculaDia {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPeli {
+    margin: auto;
+}
+
+.detallePeli {
+    text-align: center;
 }
 
 
+.proximamente{  
+    display: grid;
+    /* grid-template-columns: repeat(8, 1fr); */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2%;
+    text-align: center;   
+}
+
+span{ 
+    color: white;
+    font-weight: bold;
+}
+
+.seccion{
+    padding-top: 1%;
+    text-align: center;  
+}
+
+.proximamente img{
+    height: 228px;
+
+}
