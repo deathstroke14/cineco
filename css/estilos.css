@@ -6,7 +6,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 nav{
     position: absolute;
@@ -18,11 +18,15 @@ nav{
     padding: 0 5%;
     height: 100px;
     background-color: #242526;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    align-items: center;
+
 }
 nav .logo{
     float: left;
-    width: 40%;
-    height: 100%;
+    /* width: 50%;
+    height: 50%; */
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -34,8 +38,10 @@ nav .logo{
 nav img{
     
     float: left;
-    /* width: 40%;
-    height: 40%; */
+    width: 50%;
+    height: 50%;
+    padding-left: 15px;
+    padding-bottom: 15px;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -44,7 +50,7 @@ nav img{
     text-transform: uppercase;
     background-color: transparent;
     /* border-radius: 25px; */
-    padding: 5px;
+   
     /* border: 2px solid white; */
     /* animacion------------------------------------------ */
     animation-name: cambiarFondo; /*cambiar a cambiarColor2 / cambiarColor3*/
@@ -74,7 +80,7 @@ nav .list a {
     display: block;
     text-transform: uppercase;
     padding: 15px;
-    font-size: 19px;
+    font-size: 1.5vw;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -109,13 +115,7 @@ body {
     font-size: 1em;
 }
 
-nav {
-    
-    display: grid;
-    grid-template-columns: 2fr 1.5fr;
-    align-items: center;
 
-}
 
 .menu li {
     color: white;
@@ -245,3 +245,37 @@ nav {
     color: rgb(209, 207, 57);
     text-align: left;
 }
+/* ------------------------------- media queries barra nav------------------------*/
+@media(max-width:768px){
+
+    #logo{
+        margin-left: 50%;
+    }
+            
+        
+        nav .list{
+            float: none;
+            position: fixed;
+            z-index: 9;
+            left: 0;
+            right: 0;
+            top: 100px;
+            bottom: 100%;
+            width: auto;
+            height: auto;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: black;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+        }
+        nav .list a{
+            font-size: 20px;
+        }
+        nav :checked ~ .list{
+            bottom: 0;
+        }
+        nav .icon-bars{
+            display: block;
+        }
+    }
