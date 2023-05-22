@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	background-color: #080000;
+	font-family: 'Asap', sans-serif;
+	padding: 20px;
+}
+
+
+
+nav .list a {
+	display: block;
+	text-transform: uppercase;
+	padding: 15px;
+	font-size: 19px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+
+
+h1 {
+	font-family: 'Asap', sans-serif;
+	color: #FDD306;
+	text-align: center;
+	
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100vh;*/
+}
+
+form {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	max-width: 500px;
+	width: 100%;
+
+	opacity: 0;
+	animation: fade-in 1s ease-in-out forwards;
+
+}
+
+@keyframes fade-in {
+
+	/*agregado de animacion movimiento del registro*/
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.animacionBorde-form {
+	/*Animaciones insertadas en los bordes*/
+
+	border: 4px solid #0c0a00;
+	transition: border-color 0.3s ease-in-out;
+
+}
+
+.animacionBorde-form:hover {
+	/*Animaciones insertadas en los bordes*/
+	border-color: #FDD306;
+}
+
+label {
+	/* display: block;*/
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+}
+
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+
+
+}
+
+input[type="submit"],
+input[type="reset"] {
+	display: inline-block;
+	justify-content: space-around;
+	width: 120px;
+	text-align: center;
+	margin-top: 20px;
+	margin-right: 20%;
+	color: #0e0d0d;
+	padding: 8px 20px;
+	background-color: #FDD306;
+	border-radius: 35px;
+	border: 2px solid #FDD306;
+	box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+	transition: all 0.3s ease 0s;
+}
+
+.BotonEnviar:hover,
+/*Animaciones insertadas en el boton*/
+.BotonBorrar:hover {
+	color: #FDD306 !important;
+	background-color: transparent;
+	border-radius: 6px;
+	transition: all 0.3s ease 0s;
+	box-shadow: 0px 15px 18px rgba(0, 0, 0, .2);
+	transform: translateY(-6px);
+}

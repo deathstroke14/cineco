@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Secular+One&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="contenedor">
+        <nav>
+            <input type="checkbox" id="toggle">
+            <div class="logo">
+                <img id="logo" src="/img/logo.png" alt="cineco>">
+                <!-- <img src="img/logo.jfif" alt="logo cine"> -->
+            </div>
+            <ul class="list">
+                <li> <a href="../index.html">Inicio</a> </li>
+                <li> <a href="#">Cartelera</a> </li>
+                <li> <a href="#">Registro</a> </li>
+                <li> <a href="nosotros.html">Nosotros</a> </li>
+                <li> <a href="contacto.html">Contacto</a> </li>
+            </ul>
+            <label for="toggle" class="icon-bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <!-- Sección Contacto -->
+        <section class="boxContacto" id="linkContacto">
+            <h3>Contacto</h3>
+
+            <div class="container contacto">
+                <form id="miForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Nombre </label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Ingrese Nombre..." required>
+                            <div class="error" id="mensaje1">Ingrese Nombre (solo letras) </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputLastName">Apellido </label>
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Ingrese Apellido...">
+                            <div class="error" id="mensaje2">Ingrese Apellido (solo letras) </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email </label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese Email...">
+                        <div class="error" id="mensaje3">Ingrese Email ( ejemplo@ejemplo.com)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtefefono">Telefono </label>
+                        <input type="telefono" class="form-control" id="inputTelefono" placeholder="Ingrese Telefono...">
+                        <div class="error" id="mensaje4">Ingrese Telefono (solo números)</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputSubject">Asunto </label>
+                        <input type="text" class="form-control" id="inputSubject" placeholder="Ingrese Asunto...">
+                        <div class="error" id="mensaje5">Ingrese Asunto</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea class="form-control" rows="5" id="message" placeholder="Ingrese Mensaje..."></textarea>
+                        <div class="error" id="mensaje6">Mensaje vacio... Ingrese mensaje</div>
+                    </div>
+
+
+                    <input type="submit" id="botonEnviarMensaje"  class="botonEnviarMensaje" value="ENVIAR"></input>
+                    <!-- <input type="submit" id="botonCancelar"   class="botonCancelar" value="CANCELAR"> -->
+                    <input class="botonCancelar" type="button" value="CANCELAR" onclick="window.location.href='/index.html'"></input>
+                </form>
+            </div>
+        </section>
+        <!-- Sección Contacto -->
+    </main>
+    <footer class="pie">
+        <div class="direccion">
+            <p class="subtitulo">Domicilio</p>
+            <p> calle 50 N°750 - La Plata</p>
+            <p class="subtitulo">correo electronico</p>
+            <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+            <p class="subtitulo">Telefono</p>
+            <p>+541100324561</p>
+        </div>
+        <div>
+            <p>Desarrolado por grupo N° 19</p>
+            <p>para Codo a Codo 2023</p>
+            <p>---copyright---</p>
+            <p>-Ramiro</p>
+            <p>-Sebastian</p>
+            <p>-Victor</p>
+        </div>
+        <div class="redes">
+            <p>Nuestras redes</p>
+            <a href="https://es-la.facebook.com/" target="_blank"> <img src="../img/001-facebook.png" alt="facebook" ></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/002-instagram.png" alt="instragram"></a>
+            <a href="https://wa.me/543875743689"> <img src="../img/003-whatsapp.png" alt="whatsapp"></a>
+        </div>
+    </footer>
+
+    <script src="../js/contacto.js"></script>
+</body>
+
+</html>
