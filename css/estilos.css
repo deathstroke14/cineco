@@ -3,7 +3,9 @@
     padding: 0;
 }
 
+
 /* ------------------------------sebas- nav---------------- */
+* {
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +17,7 @@ nav {
     z-index: 10;
     left: 0;
     right: 0;
+    top: 0;
     top: 0;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 5%;
@@ -53,9 +56,11 @@ nav {
     font-weight: bold;
     text-transform: uppercase;
     background-color: transparent;
-    /* border-radius: 25px; */
-    padding: 5px;
-    /* border: 2px solid white; */
+    padding-left: 23px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
     /* animacion------------------------------------------ */
     animation-name: cambiarFondo;
     /*cambiar a cambiarColor2 / cambiarColor3*/
@@ -209,6 +214,7 @@ body {
 
 
 
+.cartelera {
 .cartelera {
     padding-top: 1%;
     display: grid;
