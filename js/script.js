@@ -168,22 +168,3 @@ function formatoFecha() {
 cambiarDiaActivo("dia1", 0, 4)
 
 proximasPelis()
-
-
-
-
-
-
-//ultimas peliculas
-//https://api.themoviedb.org/3/movie/now_playing?language=es-ES&page=1&api_key=3368e27ec959c09b0b90223449d559a5
-
-//una pelicula
-//https://api.themoviedb.org/3/movie/502356?language=es-MX&api_key=3368e27ec959c09b0b90223449d559a5
-
-//https://developer.themoviedb.org/reference/discover-movie
-
-//imagenes
-//https://www.themoviedb.org/talk/5aeaaf56c3a3682ddf0010de?language=es
-
-//proximos lanzamientos
-//https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=2023-06-01&primary_release_date.lte=2023-08-31&api_key=3368e27ec959c09b0b90223449d559a5
