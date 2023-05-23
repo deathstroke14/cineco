@@ -32,10 +32,10 @@ nav .logo{
     height: 50%; */
     display: flex;
     align-items: center;
-    font-size: 24px;
+    /* font-size: 24px;
     color: white;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase; */
     
 }
 nav img{
@@ -321,11 +321,14 @@ span{
     #logo{
         margin-left: 50%;
     }
+    nav{
+        position: fixed;
+    }
             
         
         nav .list{
             float: none;
-            position: fixed;
+            position:fixed;
             z-index: 9;
             left: 0;
             right: 0;
@@ -340,7 +343,7 @@ span{
             transition: all .3s ease-in-out;
         }
         nav .list a{
-            font-size: 20px;
+            font-size: 18px;
         }
         nav :checked ~ .list{
             bottom: 0;
