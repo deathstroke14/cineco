@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8">
@@ -11,20 +11,42 @@
 </head>
 
 <body>
-	<nav>
+	<header class="contenedor">
+        <nav>
+            <input type="checkbox" id="toggle">
+            <div class="logo">
+                <img id="logo" src="/img/logo.png" alt="cineco>">
+                <!-- <img src="img/logo.jfif" alt="logo cine"> -->
+            </div>
+            <ul class="list">
+                <li> <a href="index.html">Inicio</a> </li>
+                <li> <a href="index.html#cartelera">Cartelera</a> </li>
+                <li> <a href="registros.html">Registro</a> </li>
+                <li> <a href="html/nosotros.html">Nosotros</a> </li>
+                <li> <a href="html/contacto.html">Contacto</a> </li>
+            </ul>
+            <label for="toggle" class="icon-bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+	<!-- <nav>
 		<ul class="list">
 			<li> <a href="../index.html">Inicio</a> </li>
 		</ul>
-		<!--<a class="list" href="index.html">inicio</a>-->
-	</nav>
+		<a class="list" href="index.html">inicio</a>-->
+	<!-- </nav>
 	<header>
 		<div>
 			<h1>Formulario de registro</h1><br>
-		</div>
+		</div> --> 
 	</header>
 
 	<main>
+		<h3>Formulario de registro</h3><br>
 		<div class="container">
+			
 			<form class="animacionBorde-form" action="procesar_registro.php" method="post">
 				<div class="form-group">
 					<label for="usuario">Usuario<span style="color: red;">*</span>:</label>
@@ -61,13 +83,41 @@
 					<input type="email" id="email" name="email" placeholder="Ingrese su Email aqui..." required>
 				</div>
 				<div class="button-group">
-					<input type="submit" class="BotonEnviar" value="Enviar">
+					<input type="submit" id="botonEnviar" class="BotonEnviar" value="Enviar">
 					<input type="reset" class="BotonBorrar" value="Borrar">
 				</div>
 			</form>
 		</div>
 	</main>
+<<<<<<< HEAD:html/registros.html
 	<script type="text/javascript" src="../js/registros.js"></script>
+=======
+	<footer class="pie">
+        <div class="direccion">
+            <p class="subtitulo">Domicilio</p>
+            <p>- calle 50 N°750 - La Plata</p>
+            <p class="subtitulo">correo electronico</p>
+            <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+            <p class="subtitulo">Telefono</p>
+            <p>+541100324561</p>
+        </div>
+        <div>
+            <p>Desarrolado por grupo N° 19</p>
+            <p>para Codo a Codo 2023</p>
+            <p>---copyright---</p>
+            <p>-Ramiro</p>
+            <p>-Sebastian</p>
+            <p>-Victor</p>
+        </div>
+        <div class="redes">
+            <p>Nuestras redes</p>
+            <a href="https://es-la.facebook.com/" target="_blank"> <img src="../img/001-facebook.png" alt="facebook" ></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/002-instagram.png" alt="instragram"></a>
+            <a href="https://wa.me/543875743689"> <img src="../img/003-whatsapp.png" alt="whatsapp"></a>
+        </div>
+    </footer>
+	<script type="text/javascript" src="js/registros.js"></script>
+>>>>>>> 03bf8c58f1823e445553f9987dcb6b4c73d1bb51:registros.html
 </body>
 
 </html>

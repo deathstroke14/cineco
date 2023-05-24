@@ -114,7 +114,11 @@ transition: all .3s ease-in-out;
 body{
     background-color: black;
 }
-h2{ color: white;}
+h2{ 
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .container{
     border: 10px solid black;
     display: flex;
@@ -196,12 +200,14 @@ iframe{
     /* border: 3px solid blue ; */
     justify-content: space-between;
     padding: 7px;
+    background-color: #242526;
 }
 .pie  {
     color: white;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
+    font-size: 1vw;
 }
 .direccion a {
     color: red;

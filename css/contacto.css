@@ -240,12 +240,14 @@ label{
     /* border: 3px solid blue ; */
     justify-content: space-between;
     padding: 7px;
+    background-color: #242526;
 }
 .pie  {
     color: white;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
+    font-size: 1vw;
 }
 .direccion a {
     color: red;
