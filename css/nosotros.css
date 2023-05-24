@@ -130,6 +130,13 @@ h2 {
     font-size: 1em;
 }
 
+h1 {
+    color: #FDD306;
+    text-align: center;
+    font-size: calc(1em + 2vw);
+    margin-top: 80px;
+}
+
 iframe{
     border-radius: 10px;
     width: 600px;
@@ -144,7 +151,7 @@ iframe{
     flex-direction: column;
     text-align: center;
     color: white;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .presentacion {
@@ -152,12 +159,12 @@ iframe{
     text-align: justify;
 }
 
-.personal {
+/* .personal {
     display: flex;
     align-content: center;
     justify-content: space-around;
 
-}
+} */
 
 .usuario h3 {
     justify-content: center;

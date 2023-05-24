@@ -269,6 +269,10 @@ span {
         margin-left: 50%;
     }
 
+    nav {
+        position: fixed;
+    }
+
     nav .list {
         float: none;
         position: fixed;
@@ -426,7 +430,7 @@ span {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 2%;
+        row-gap: 1%;
         text-align: center;
     }
 }

@@ -1,7 +1,6 @@
 function enviarMensaje() {
-    alert('El registro fue exitoso!');
-    
-    window.location.href='index.html'
+	alert('El registro fue exitoso!');
+	window.location.href = '/index.html'
 }
 const form = document.querySelector('form');
 const usuarioInput = document.querySelector('#usuario');
@@ -16,7 +15,7 @@ form.addEventListener('submit', (event) => {
 		return;
 	}
 	enviarMensaje()
-		
+
 	// aquí podrías agregar el código para enviar el formulario
 });
 

@@ -1,14 +1,14 @@
 function enviarMensaje() {
     alert('Mensaje enviado con éxito!');
     document.getElementById("miForm").reset();
-    window.location.href='/index.html'
+    window.location.href = '/index.html'
 }
 //formulario validacion
 var regexNombre = /^\D+$/;
 var regexEmail = /^([a-zA-Z0-9._%+-\?!]+)@([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,})$/;
 var ExpRegSoloNumeros = /^([0-9])*$/;
 
-$(document).ready (function () {
+$(document).ready(function () {
     $("#botonEnviarMensaje").click(function () {
         var nombre = $("#inputName").val();
         var apellido = $("#inputLastName").val();
