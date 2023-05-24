@@ -137,11 +137,11 @@ h1 {
     margin-top: 80px;
 }
 
-iframe{
+iframe {
     border-radius: 10px;
     width: 600px;
     height: 450px;
-    border: 0 ;
+    border: 0;
 }
 
 .container {
@@ -237,6 +237,10 @@ iframe {
     #logo {
         width: 50%;
         margin-left: 50%;
+    }
+
+    nav {
+        position: fixed;
     }
 
     nav .list {
