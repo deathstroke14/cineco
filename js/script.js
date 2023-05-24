@@ -73,8 +73,6 @@ function traerPeli(id) {//traigo el detalle de una sola peli por su id
 
 function mostrarPeli(peli) { //muestro detalle de una peli
 
-
-
     contenido.innerHTML += `<div class="peliculaDia">
             <img class="imgPeli" src="https://image.tmdb.org/t/p/w154${peli.poster_path}" alt="">
     
@@ -84,14 +82,10 @@ function mostrarPeli(peli) { //muestro detalle de una peli
                 Duración: ${peli.runtime} minutos <br>
                 Genero:<br> ${generos(peli)}<br>
                 Fecha de estreno:<br>${peli.release_date.split("-").reverse().join("-")}<br>
-                Horario: ${hora}
+                Horario: ${hora}hs
             </div>
         </div>`
     horario()
-
-
-
-
 }
 
 
@@ -158,13 +152,9 @@ function proximasPelis() {
 function formatoFecha() {
     const [anio, mes, dia] = fecha.split("-")
     fecha_nac.split("-").reverse().join("-");
-    return dia+"-"+mes+"-"+anio
+    return dia + "-" + mes + "-" + anio
 }
 //let [anio, mes, dia] = pelis.results[i].release_date.split("-"); dia-mes-anio;
 
-
-
-
 cambiarDiaActivo("dia1", 0, 4)
-
 proximasPelis()
