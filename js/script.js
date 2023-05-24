@@ -1,5 +1,8 @@
-let hoy = new Date();
-hoy.setDate(hoy.getDate() - 1);
+//----------------------------------------------------------
+//dias cartelera
+//----------------------------------------------------------
+let hoy = new Date(); //dias de hoy
+hoy.setDate(hoy.getDate() - 1);// resto un dia a la fechas actual
 let i = 0
 
 var nombreDias = document.getElementsByClassName("nombreDia")
@@ -15,22 +18,22 @@ while (i < 7) {//7 dias con fecha en latino
     i++;
 }
 
-
 //----------------------------------------------------------
-//api
+//api pelis
 //----------------------------------------------------------
+//la api es gratis para uso propio pero limitado a ciertas llamadas
+//por eso tiene clave
+//para habilitar, agregar la clave dentro de la comillas simples de Authorization:'aca va la clave' 
 
 const options = {//pass api
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: ''
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzY4ZTI3ZWM5NTljMDliMGI5MDIyMzQ0OWQ1NTlhNSIsInN1YiI6IjY0NjQxZDA3ZjQ4YjM0MDEzODRiNWQwNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p9sch99tADmhVLWxgTDRam8-olCib6p74qRnBJ-lLVs'
     }
 }
 
 var contenido = document.querySelector('.peliculasDia')
-
-
 
 function limpiarDiv() {//limpiar pelis anteriores del div
     contenido.innerHTML = ''
@@ -38,14 +41,13 @@ function limpiarDiv() {//limpiar pelis anteriores del div
 
 var hora = 15 //horario de peli
 
-function horario() {//1era pelia a las 15 ,2da a las 18, 3da a las 21 y 4ta a las 24
+function horario() {//1era peli a las 15 ,2da a las 18, 3da a las 21 y 4ta a las 24
     if (hora !== 24) {
         hora += 3
     } else {
         hora = 15
     }
 }
-
 
 var url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
 
@@ -102,18 +104,19 @@ function generos(peli) { //recorro el array de genero de la peli
 }
 
 
-var min = 0 //solo traigo 4 pelis del arreglo
-var max = 4 //
+var min = 0 //
+var max = 4 //solo traigo 4 pelis del arreglo
 
 
-function cambiarDia(a, b) {//cambio los indices del array de pelis para cargar otras pelis diferentes
+function cambiarDia(a, b) {//cambio los indices del array de pelis para cargar otras pelis diferentes al cambiar el dia
+    //x ejemplo : lunes martes las mimas pelis, mircoles jueves las mismas ya asi dos dias iguales al 3er dia cabio pelis
     min = a
     max = b
     url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
     traerPelis()
 }
 
-function cambiarDiaActivo(id, minimo, maximo) {//cambiar seleccion de pelis segun dia
+function cambiarDiaActivo(id, minimo, maximo) {//cambiar seleccion de pelis segun dia y actualizo el estilo del dia selecionado
     limpiarDiv()
 
     document.getElementsByClassName("activo")[0].className = "dia"
@@ -121,18 +124,18 @@ function cambiarDiaActivo(id, minimo, maximo) {//cambiar seleccion de pelis segu
     cambiarDia(minimo, maximo)
 }
 
-function proximasPelis() {
+function proximasPelis() {//trae las pelis para cartelera 
     let url2 = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=2023-06-01&primary_release_date.lte=2023-08-31&with_release_type=3|2'
     let contenido2 = document.querySelector('.proximamente')
 
-    //trae las pelis en cartelera 
+
     fetch(url2, options)
         .then(response => response.json())
         .then(pelis => mostrarData(pelis))
 
     //.catch(err => console.error(err))
 
-    function mostrarData(pelis) { //envio los ids de las pelis para el detalle individual
+    function mostrarData(pelis) { //envio las pelis para sacar el poster y la fecha de estreno proximpo
         for (let i = 2; i < 16; i++) {
 
             contenido2.innerHTML += `
@@ -144,17 +147,11 @@ function proximasPelis() {
             </div>
             `
         }
-
     }
-
 }
 
-function formatoFecha() {
-    const [anio, mes, dia] = fecha.split("-")
-    fecha_nac.split("-").reverse().join("-");
-    return dia + "-" + mes + "-" + anio
-}
-//let [anio, mes, dia] = pelis.results[i].release_date.split("-"); dia-mes-anio;
-
-cambiarDiaActivo("dia1", 0, 4)
-proximasPelis()
+//----------------------------------------------------------
+//llamado funciones
+//----------------------------------------------------------
+cambiarDiaActivo("dia1", 0, 4)//para traer las pelis de la cartelera del dia de hoy
+proximasPelis()//para traer las pelis en proximos

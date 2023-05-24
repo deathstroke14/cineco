@@ -1,33 +1,34 @@
-/* ------------------------------sebas- nav---------------- */
 * {
     padding: 0;
     margin: 0;
-  
 }
 
-nav {
+body {
+    background-color: black;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    max-width: 1100px;
+    min-width: 300px;
+    margin: auto;
+    overflow: auto;
+}
 
+/* ------------------------------nav---------------- */
+nav {
     position: absolute;
     z-index: 10;
     left: 0;
     right: 0;
     top: 0;
-    /* font-family: Arial, Helvetica, sans-serif; */
     padding: 0 5%;
-    /* height: 60px; */
     background-color: #242526;
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     align-items: center;
-    font-family: 'Montserrat';
-
 }
 
-
 nav img {
-
     float: left;
-
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 3%;
@@ -36,25 +37,13 @@ nav img {
     display: flex;
     align-items: center;
     font-size: 24px;
-    /* color: white; */
-    /* font-weight: bold;
-    text-transform: uppercase; */
-    /* background-color: transparent; */
-    /* border-radius: 25px; */
-
-    /* border: 1px solid white; */
     /* animacion------------------------------------------ */
     animation-name: cambiarFondo;
-    /*cambiar a cambiarColor2 / cambiarColor3*/
     animation-duration: 4s;
     animation-timing-function: linear;
     /*cambiar a linear*/
     animation-iteration-count: infinite;
 }
-
-/* animacion*/
-
-
 
 nav .list {
     padding-right: 10%;
@@ -96,7 +85,6 @@ nav .list a:hover {
     border-bottom: 4px solid #FDD306;
 }
 
-
 nav .icon-bars {
     display: none;
     position: absolute;
@@ -136,223 +124,227 @@ nav .icon-bars .line {
 }
 
 /* --------------------------fin nav------------------------ */
-
-
-
-
-
-
-body {
-	background-color: #080000;
-	font-family: 'Asap', sans-serif;
-	
-}
-
-
-/* 
-nav .list a {
-	display: block;
-	text-transform: uppercase;
-	padding: 15px;
-	font-size: 19px;
-	font-weight: bold;
-	color: white;
-	text-decoration: none;
-}
- */
-
-
-h3 {
-	font-family: 'Asap', sans-serif;
-	color: #FDD306;
-	text-align: center;
-	margin-top: 110px;
+h1 {
+    color: #FDD306;
+    text-align: center;
+    margin-top: 110px;
     font-size: calc(1em + 2vw);
-	
 }
 
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* margin-top: 90px; */
-	
-	/* height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	max-width: 500px;
-	width: 100%;
-margin-bottom: 15px;
-	opacity: 0;
-	animation: fade-in 1s ease-in-out forwards;
-
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
 }
 
 @keyframes fade-in {
 
-	/*agregado de animacion movimiento del registro*/
-	0% {
-		opacity: 0;
-		transform: translateY(-20px);
-	}
+    /*agregado de animacion movimiento del registro*/
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-group {
-	margin-bottom: 20px;
-	border-radius: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .animacionBorde-form {
-	/*Animaciones insertadas en los bordes*/
+    /*Animaciones insertadas en los bordes*/
 
-	border: 4px solid #0c0a00;
-	transition: border-color 0.3s ease-in-out;
+    border: 4px solid #0c0a00;
+    transition: border-color 0.3s ease-in-out;
 
 }
 
 .animacionBorde-form:hover {
-	/*Animaciones insertadas en los bordes*/
-	border-color: #FDD306;
+    /*Animaciones insertadas en los bordes*/
+    border-color: #FDD306;
+
 }
 
 label {
-	/* display: block;*/
-	font-weight: bold;
-	margin-bottom: 5px;
+    /* display: block;*/
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="date"],
 input[type="email"] {
-	border: 1px solid #ccc;
-	border-radius: 20px;
-	box-sizing: border-box;
-	font-size: 16px;
-	padding: 10px;
-	width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
 }
 
 .button-group {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 20px;
-
-
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 input[type="submit"],
 input[type="reset"] {
-	display: inline-block;
-	justify-content: space-around;
-	width: 120px;
-	text-align: center;
-	margin-top: 20px;
-	margin-right: 20%;
-	color: #0e0d0d;
-	padding: 8px 20px;
-	background-color: #FDD306;
-	border-radius: 35px;
-	border: 2px solid #FDD306;
-	box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
-	transition: all 0.3s ease 0s;
+    display: inline-block;
+    justify-content: space-around;
+    width: 120px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20%;
+    color: #0e0d0d;
+    padding: 8px 20px;
+    background-color: #FDD306;
+    border-radius: 35px;
+    border: 2px solid #FDD306;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease 0s;
 }
 
 .BotonEnviar:hover,
 /*Animaciones insertadas en el boton*/
 .BotonBorrar:hover {
-	color: #FDD306 !important;
-	background-color: transparent;
-	border-radius: 6px;
-	transition: all 0.3s ease 0s;
-	box-shadow: 0px 15px 18px rgba(0, 0, 0, .2);
-	transform: translateY(-6px);
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 18px rgba(0, 0, 0, .2);
+    transform: translateY(-6px);
 }
+
 /* ----------------------------footer------------------ */
 .pie {
     display: grid;
     grid-template-columns: auto auto auto;
-    /* border: 3px solid blue ; */
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 10px;
-    /* padding: 10px; */
     color: white;
     text-align: center;
     align-items: center;
     font-family: 'Montserrat';
-    
-
 }
-
-
 
 .direccion a {
     color: #FDD306;
     text-decoration: none;
-
 }
 
 .direccion {
-
     text-align: left;
 }
 
 .redes {
-
     text-align: right;
 }
-/* ------------------------------- media queries barra nav------------------------*/
-@media(max-width:768px){
 
-    #logo{
+
+/* ------------------------------- media queries ------------------------*/
+
+@media(max-width:600px) {
+
+    #logo {
+        width: 50%;
         margin-left: 50%;
     }
-    nav{
+
+    nav .list {
+        float: none;
         position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 48px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: black;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
     }
-            
-        
-        nav .list{
-            float: none;
-            position:fixed;
-            z-index: 9;
-            left: 0;
-            right: 0;
-            top: 64px;
-            bottom: 100%;
-            width: auto;
-            height: auto;
-            flex-direction: column;
-            justify-content: space-evenly;
-            background-color: black;
-            overflow: hidden;
-            transition: all .3s ease-in-out;
-        }
-        nav .list a{
-            font-size: 18px;
-        }
-        nav :checked ~ .list{
-            bottom: 0;
-        }
-        nav .icon-bars{
-            display: block;
-        }
-        .personal{
-            flex-direction: column;
-        }
-        .pie{
-            font-size: 70%;
-        }
+
+    nav .list a {
+        font-size: 1em;
     }
+
+    nav :checked~.list {
+        bottom: 0;
+    }
+
+    nav .icon-bars {
+        display: block;
+    }
+
+    .pie {
+        display: grid;
+        justify-content: space-around;
+        grid-template: auto auto / auto auto;
+        grid-template-areas: "direccion grupo" "redes redes";
+        row-gap: 5px;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .grupo {
+        grid-area: grupo;
+    }
+
+    .direccion {
+        grid-area: direccion;
+        text-align: center;
+    }
+
+    .redes {
+        grid-area: redes;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+
+    #logo {
+        width: 50%;
+    }
+
+    .pie {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        /* row-gap: 10px; */
+        font-size: 0.9em;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    #logo {
+        width: 20%;
+    }
+}
