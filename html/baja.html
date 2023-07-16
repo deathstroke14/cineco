@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estiloMenu.css">
+    <link rel="icon" href="img/cineco.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">>
+    <title>Menu Administrador</title>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="toggle">
+
+        <div class="logo">
+            <img id="logo" src="/img/logo.webp" alt="cineco>">
+        </div>
+
+        <ul class="list">
+            <li> <a class="actual" href="../index.html">Inicio</a> </li>
+            <li> <a href="registros.html">Registro</a> </li>
+            <li> <a href="nosotros.html">Nosotros</a> </li>
+            <li> <a href="contacto.html">Contacto</a> </li>
+            <li> <a href="login.html">Iniciar Sesion</a> </li>
+        </ul>
+
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <main class="main">
+    
+    <section id="baja">
+        <h1>Baja de Peliculas</h1>
+
+        <table class="baja">
+
+            <tr>
+                <th>Código</th>
+                <th>Titulo</th>
+                <th>Duracion</th>
+                <th align="right">Asientos Totales</th>
+                <th>Acciones</th>
+            </tr>
+
+            <tbody id="tablaPeliculas2">
+
+            </tbody>
+        </table>
+
+        <div class="contenedor-centrado">
+            <a class="etiqueta" href="menu.html">Menu principal</a>
+        </div>
+    </section>
+   
+</main>
+    <footer class="pie">
+
+        <div class="direccion">
+            <!-- <br><br> -->
+            <p class="subtitulo">Domicilio:</p>
+            <p>Calle 50 N°750</p>
+            <p>La Plata</p>
+            <p class="subtitulo">Correo electronico:</p>
+            <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+            <p class="subtitulo">Telefono:</p>
+            <p>+541100324561</p>
+        </div>
+
+        <div class="grupo">
+            <p>Desarrollado por:</p>
+            <p>grupo N° 19</p>
+            <p>Campos</p>
+            <p>Geronimo</p>
+            <p>Menescardi</p>
+            <p>para Codo a Codo</p>
+            <p>© 2023</p>
+        </div>
+
+        <div class="redes">
+            <p>Nuestras redes</p>
+            <a href="https://es-la.facebook.com/" target="_blank"> <img src="../img/01facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../img/02instagram.svg" alt="instragram"></a>
+            <a href="https://wa.me/543875743689"> <img src="../img/03whatsapp.svg" alt="whatsapp"></a>
+        </div>
+
+    </footer>
+    <script src="../js/baja.js"></script>
+</body>
+
+</html>

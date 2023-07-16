@@ -1,3 +1,67 @@
+.ocupada,
+.disponible,
+.compradaUsuario,
+.carritoUsuario,
+.seleccionada {
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.5rem;
+    /* text-align: center; */
+}
+
+.ocupada {
+    
+    background-image: url('/img/00asiento_ocupado.svg');
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    color: white;
+}
+
+.disponible {
+    background-image: url('/img/00asiento_disponible.svg');
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    
+}
+
+.compradaUsuario {
+    vertical-align: 20%;
+    background-image: url('/img/00asiento_comprado.svg');
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    color: white;
+
+}
+
+.carritoUsuario {
+    
+    background-image: url('/img/00asiento_carrito.svg');
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    color: white;
+}
+
+.seleccionada {
+    
+    background-image: url('/img/00asiento_seleccionada.svg');
+    background-size: cover;
+    width: 55px;
+    height: 73px;
+    
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+
 * {
     padding: 0;
     margin: 0;
@@ -12,11 +76,13 @@ body {
     margin: auto;
     overflow: auto;
 }
+
 /* ---------------------------estilos nuevos---------------- */
 form {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 29%;
+
     max-width: 400px;
     /* margin: 0 auto; */
     padding: 20px;
@@ -24,6 +90,7 @@ form {
     border: 1px solid lightslategray;
     border-radius: 15px;
 }
+
 label {
     display: block;
     margin-bottom: 15px;
@@ -40,22 +107,22 @@ textarea {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+input[type="button"] {
     padding: 10px;
     background-color: #FDD306;
-    color:black;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
     background-color: #FDD306
 }
 
 button {
     padding: 8px;
-    margin:4px;
+    margin: 8px;
     background-color: #FDD306;
     color: #ffffff;
     border: none;
@@ -67,7 +134,192 @@ button:hover {
     background-color: #FDD306;
 }
 
+h1 {
+    color: #FDD306;
+    text-align: center;
+    margin-top: 80px;
+    font-size: calc(1em + 2vw);
+}
 
+.container {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+#cartelera {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1em;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#cartelera .dia {
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 3%;
+    color: white;
+    border-radius: 5px;
+}
+
+#cartelera .activo {
+    color: black;
+    background-color: #FDD306;
+}
+
+#cartelera .nroDia {
+    font-size: 2em;
+}
+
+#cartelera .nombreMes {
+    font-size: 1.2em;
+}
+
+#cartelera .dia:hover {
+    background-color: #FDD306;
+    color: black;
+}
+
+#funciones {
+    padding: 0% 1% 1% 1%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+    border-radius: 5px;
+}
+
+#funciones .peliculaDia {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+
+#funciones .activo {
+    color: black;
+    background-color: #FDD306;
+}
+
+.imgPeli {
+    margin: auto;
+}
+
+.detallePeli {
+    text-align: center;
+}
+
+
+
+/* #asientos {
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1em;
+    justify-items: center;   
+    background-color: white;
+    border-radius: 5px;
+
+
+    
+} */
+
+#asientos {
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: .5em;
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table {
+    border-radius: 4px solid black;
+}
+
+table th,
+table td {
+    border: solid 3px;
+}
+
+/* th,td {
+    border: 2px solid black;
+} */
+
+th,
+td {
+    padding: 5px;
+}
+
+td {
+    width: 25%;
+}
+
+#tabla-carrito {
+    padding: 1%;
+    /* display: grid; */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+#detalle {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    /* align-items: center;
+    margin: auto; */
+    background-color: white;
+    border-radius: 5px;
+    justify-items: center;
+}
+
+
+/* #asientos {
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: .3em;
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+} */
 
 /* ------------------------------nav---------------- */
 nav {

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/estilo_venta.css">
+  <title>Venta de Entrada</title>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="toggle">
+
+    <div class="logo">
+      <img id="logo" src="/img/logo.webp" alt="cineco>">
+    </div>
+
+    <ul class="list">
+      <li> <a class="actual" href="../index.html">Inicio</a> </li>
+      <li> <a href="registros.html">Registro</a> </li>
+      <li> <a href="nosotros.html">Nosotros</a> </li>
+      <li> <a href="contacto.html">Contacto</a> </li>
+      <li> <a href="login.html">Iniciar Sesion</a> </li>
+    </ul>
+
+    <label for="toggle" class="icon-bars">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+  <section class="venta">
+    <div id="app">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Titulo</th>
+            <th>Duracion</th>
+            <th align="right"> &nbsp; &nbsp; Asientos <br> &nbsp; &nbsp; Disponibles</th>
+            <!-- <td><button onclick="verCarrito()">Ver Carrito</button></td> -->
+          </tr>
+        </thead>
+        <tbody id="tablaPeliculas">
+        </tbody>
+
+      </table>
+
+    </div>
+   
+
+  </section>
+
+  <footer class="pie">
+
+    <div class="direccion">
+      <!-- <br><br> -->
+      <p class="subtitulo">Domicilio:</p>
+      <p>Calle 50 N°750</p>
+      <p>La Plata</p>
+      <p class="subtitulo">Correo electronico:</p>
+      <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+      <p class="subtitulo">Telefono:</p>
+      <p>+541100324561</p>
+    </div>
+
+    <div class="grupo">
+      <p>Desarrollado por:</p>
+      <p>grupo N° 19</p>
+      <p>Campos</p>
+      <p>Geronimo</p>
+      <p>Menescardi</p>
+      <p>para Codo a Codo</p>
+      <p>© 2023</p>
+    </div>
+
+    <div class="redes">
+      <p>Nuestras redes</p>
+      <a href="https://es-la.facebook.com/" target="_blank"> <img src="../img/01facebook.svg" alt="facebook"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="../img/02instagram.svg" alt="instragram"></a>
+      <a href="https://wa.me/543875743689"> <img src="../img/03whatsapp.svg" alt="whatsapp"></a>
+    </div>
+
+  </footer>
+
+  <script>
+    var carrito = [];
+ 
+
+
+    const URL = "https://sebas149.pythonanywhere.com/";
+
+
+    fetch(URL + 'peliculas')
+      .then(function (response) {
+        if (response.ok) {
+          return response.json() // Parseamos la respuesta JSON
+        } else {
+          throw new Error('Error al obtener las Peliculas.')
+        }
+      })
+      .then(function (data) {
+        var tablaPeliculas = document.getElementById('tablaPeliculas')
+
+        // Iteramos sobre los Peliculas y agregamos filas a la tabla
+        data.forEach(function (pelicula) {
+          var fila = document.createElement('tr')
+          fila.innerHTML = '<td>' + pelicula.id + '</td>' +
+            '<td>' + pelicula.titulo + '</td>' +
+            '<td align="right">' + pelicula.duracion + '</td>' +
+            '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + pelicula.asientos_totales + '</td>' +
+
+            '<td><button onclick="venderEntrada(' + pelicula.id + ')">Comprar Entrada</button></td>'
+
+          tablaPeliculas.appendChild(fila)
+        })
+      })
+      .catch(function (error) {
+        console.log('Error:', error)
+        alert('Error al obtener las Peliculas.')
+      })
+
+
+
+    function venderEntrada(id) {
+      fetch(URL + `peliculas/${id}/vender_entrada`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+
+
+          window.location.reload();
+
+        })
+        .catch(error => {
+          console.error(`Error al vender entrada para la película con ID ${id}:`, error);
+          alert('Error al vender la entrada.');
+        });
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

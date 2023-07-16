@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boleteria></title>
+    <link rel="stylesheet" href="/css/boleteria.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/cineco.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="toggle">
+
+        <div class="logo">
+            <img id="logo" src="/img/logo.webp" alt="cineco>">
+        </div>
+
+        <ul class="list">
+            <li> <a href="../index.html">Inicio</a> </li>
+            <li> <a class="actual" href="/html/boleteria.html">Boletería</a> </li>
+            <li> <a href="registros.html">Registro</a> </li>
+            <li> <a href="nosotros.html">Nosotros</a> </li>
+            <li> <a href="contacto.html">Contacto</a> </li>
+            <li> <a href="login.html">Iniciar Sesion</a> </li>
+        </ul>
+
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    
+    <h1>Boleteria</h1>
+    <div id="ingreso">
+        <form>
+            <label for="apellido">Usuario:</label>
+            <input type="text" id="apellido" name="usuario" placeholder="usuario1" required>
+            <br><br>
+            <label for="dni">Contraseña:</label>
+            <input type="password" min="1" max="999999999" id="dni" name="dni" placeholder="11111111" required>
+            <br><br>
+            <input type="button" onClick="traerUsuario();" value="Ingresar">
+            <br><br>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div id="saludo" style="display: none;"></div><br>
+    </div>
+    <!-- <div id="resultado"></div><br> -->
+
+    <!-- <div id="dias"> -->
+    <div id="cartelera" style="display: none;"></div>
+
+    <br>
+
+    <div id="funciones" style="display: none;"></div><br>
+
+    <div id="asientos" style="display: none;"></div><br>
+
+    <div id="detalle" style="display: none;"></div>
+
+    <div id="carrito"></div><br>
+
+    <div id="entradas_carrito"></div><br>
+
+
+    <input id="idPersona" type="hidden" value="">
+    <input id="idFuncion" type="hidden" value="">
+
+
+    <footer class="pie">
+
+        <div class="direccion">
+            <!-- <br><br> -->
+            <p class="subtitulo">Domicilio:</p>
+            <p>Calle 50 N°750</p>
+            <p>La Plata</p>
+            <p class="subtitulo">Correo electronico:</p>
+            <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+            <p class="subtitulo">Telefono:</p>
+            <p>+541100324561</p>
+        </div>
+
+        <div class="grupo">
+            <p>Desarrollado por:</p>
+            <p>grupo N° 19</p>
+            <p>Campos</p>
+            <p>Geronimo</p>
+            <p>Menescardi</p>
+            <p>para Codo a Codo</p>
+            <p>© 2023</p>
+        </div>
+
+        <div class="redes">
+            <p>Nuestras redes</p>
+            <a href="https://es-la.facebook.com/" target="_blank"> <img src="/img/01facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="/img/02instagram.svg" alt="instragram"></a>
+            <a href="https://wa.me/543875743689"> <img src="/img/03whatsapp.svg" alt="whatsapp"></a>
+        </div>
+
+    </footer>
+
+    <script src="/js/boleteria.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="icon" href="img/cineco.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <title>Iniciar sesión</title>
+
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="toggle">
+
+    <div class="logo">
+      <img id="logo" src="/img/logo.webp" alt="cineco>">
+    </div>
+
+    <ul class="list">
+      <li> <a href="../index.html">Inicio</a> </li>
+      <li> <a href="/html/boleteria.html">Boletería</a> </li>
+      <li> <a href="registros.html">Registro</a> </li>
+      <li> <a href="nosotros.html">Nosotros</a> </li>
+      <li> <a href="contacto.html">Contacto</a> </li>
+      <li> <a class="actual" href="login.html">Iniciar Sesion</a> </li>
+    </ul>
+
+    <label for="toggle" class="icon-bars">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+
+  <h1>Iniciar sesión</h1>
+  <form>
+    <label for="nombre">Usuario:</label>
+    <input type="text" id="nombre" placeholder="admin" required><br>
+    <label for="contrasenia">Contraseña:</label>
+    <input type="password" id="contrasenia" placeholder="admin" required><br>
+    <input type="submit" value="Iniciar sesión">
+  </form>
+  <footer class="pie">
+
+    <div class="direccion">
+      <!-- <br><br> -->
+      <p class="subtitulo">Domicilio:</p>
+      <p>Calle 50 N°750</p>
+      <p>La Plata</p>
+      <p class="subtitulo">Correo electronico:</p>
+      <p><a href="mailto:sebastian.geronimoo@gmail.com">cineco@gmail.com</a></p>
+      <p class="subtitulo">Telefono:</p>
+      <p>+541100324561</p>
+    </div>
+
+    <div class="grupo">
+      <p>Desarrollado por:</p>
+      <p>grupo N° 19</p>
+      <p>Campos</p>
+      <p>Geronimo</p>
+      <p>Menescardi</p>
+      <p>para Codo a Codo</p>
+      <p>© 2023</p>
+    </div>
+
+    <div class="redes">
+      <p>Nuestras redes</p>
+      <a href="https://es-la.facebook.com/" target="_blank"> <img src="../img/01facebook.svg" alt="facebook"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="../img/02instagram.svg" alt="instragram"></a>
+      <a href="https://wa.me/543875743689"> <img src="../img/03whatsapp.svg" alt="whatsapp"></a>
+    </div>
+
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar el envío del formulario
+
+        // Obtener los valores del usuario y la contraseña
+        var nombre = document.getElementById('nombre').value;
+        var contrasenia = document.getElementById('contrasenia').value;
+
+        // Realizar la validación del inicio de sesión
+        if (nombre === 'admin' && contrasenia === 'admin') {
+          alert('Inicio de sesión como administrador exitoso');
+          window.location.href = 'menu.html';
+        }
+        else if (nombre === 'user' && contrasenia === 'user') {
+          alert('Inicio de sesión exitoso');
+          window.location.href = 'prueba_venta.html';
+        }
+        else {
+          alert('Usuario o contraseña incorrectos');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>

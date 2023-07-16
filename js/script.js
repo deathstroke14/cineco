@@ -29,7 +29,7 @@ const options = {//pass api
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: ''
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzY4ZTI3ZWM5NTljMDliMGI5MDIyMzQ0OWQ1NTlhNSIsInN1YiI6IjY0NjQxZDA3ZjQ4YjM0MDEzODRiNWQwNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.p9sch99tADmhVLWxgTDRam8-olCib6p74qRnBJ-lLVs'
     }
 }
 
@@ -49,7 +49,16 @@ function horario() {//1era peli a las 15 ,2da a las 18, 3da a las 21 y 4ta a las
     }
 }
 
-var url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
+let today = new Date()
+today.setDate(today.getDate() - 7)
+let inicio = today.toISOString().slice(0, 10)
+
+today.setDate(today.getDate() + 15)
+let final = today.toISOString().slice(0, 10)
+
+var url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=${inicio}&primary_release_date.lte=${final}&with_release_type=3|2`
+
+//var url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
 
 function traerPelis() { //trae las pelis en cartelera
 
@@ -112,7 +121,8 @@ function cambiarDia(a, b) {//cambio los indices del array de pelis para cargar o
     //x ejemplo : lunes martes las mimas pelis, mircoles jueves las mismas ya asi dos dias iguales al 3er dia cabio pelis
     min = a
     max = b
-    url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
+    //url = 'https://api.themoviedb.org/3/movie/now_playing?language=es-MX&page=1'
+    url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=${inicio}&primary_release_date.lte=${final}&with_release_type=3|2`
     traerPelis()
 }
 
@@ -125,7 +135,15 @@ function cambiarDiaActivo(id, minimo, maximo) {//cambiar seleccion de pelis segu
 }
 
 function proximasPelis() {//trae las pelis para cartelera 
-    let url2 = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=2023-06-01&primary_release_date.lte=2023-08-31&with_release_type=3|2'
+    let hoy = new Date()
+    hoy.setDate(hoy.getDate() + 20)
+    let inicio = hoy.toISOString().slice(0, 10)
+
+    hoy.setDate(hoy.getDate() + 60)
+    let final = hoy.toISOString().slice(0, 10)
+
+    //let url2 = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=2023-06-01&primary_release_date.lte=2023-08-31&with_release_type=3|2'
+    let url2 = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-MX&page=1&sort_by=popularity.desc&&primary_release_date.gte=${inicio}&primary_release_date.lte=${final}&with_release_type=3|2`
     let contenido2 = document.querySelector('.proximamente')
 
 
